@@ -182,10 +182,11 @@ with st.sidebar:
     model_choice = st.selectbox(
         "Choose model",
         list(models.keys()),
+        ["Basic Model", "⭐ Tuned Model"],
         index=0,
         label_visibility="collapsed",
     )
-    if "⭐" in model_choice or "Tuned" in model_choice:
+    if model_choice and ("⭐" in model_choice or "Tuned" in model_choice):
         st.markdown(
             '<span class="badge-recommended" style="background:#d1fae5;color:#065f46;'
             'padding:4px 10px;border-radius:99px;font-size:12px;font-weight:700;">'
