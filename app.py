@@ -180,11 +180,12 @@ with st.sidebar:
     st.markdown("---")
     st.markdown("#### Select Model")
     model_choice = st.selectbox(
+        model_choice = st.selectbox(
         "Choose model",
         list(models.keys()),
-        ["Basic Model", "⭐ Tuned Model"],
         index=0,
         label_visibility="collapsed",
+)
     )
     if model_choice and ("⭐" in model_choice or "Tuned" in model_choice):
         st.markdown(
