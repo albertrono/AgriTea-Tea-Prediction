@@ -137,7 +137,7 @@ label { font-size: 13px !important; font-weight: 600 !important; color: #374151 
 """, unsafe_allow_html=True)
 
 # ── MODEL LOADING ──────────────────────────────────────────────────────────────
-MODEL_DIR = os.path.dirname(__file__)
+MODEL_DIR = os.path.join(os.path.dirname(__file__), "models")
 
 @st.cache_resource
 def load_models():
